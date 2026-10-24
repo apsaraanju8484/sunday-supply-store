@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="description" content="Good things for everyday living. Discover thoughtful home and lifestyle finds at Sunday Supply." />
+    <title>Sunday Supply — Good things for everyday living</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">A little treat: free shipping on orders over $60 <span>✳</span></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Sunday Supply home">sunday<span>SUPPLY</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop all</a><a href="#shop" data-category-link="Home">Home</a><a href="#shop" data-category-link="Living">Living</a><a href="#story">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button search-toggle" aria-label="Search products" title="Search">⌕</button>
+        <button class="cart-button" id="open-cart" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A softer kind of everyday</p>
+          <h1>Make room<br />for <em>good things.</em></h1>
+          <p class="hero-note">Thoughtful finds for slow mornings, cozy corners, and all the little rituals in between.</p>
+          <a class="button button-dark" href="#shop">Find your favourites <span>↗</span></a>
+          <div class="hero-stamp"><span>MADE FOR<br />REAL LIFE</span><b>✳</b></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Sunlit still life of home and lifestyle objects">
+          <div class="hero-orb"></div>
+          <div class="hero-photo"></div>
+          <div class="hero-caption">SLOW DOWN<br />A LITTLE.</div>
+          <div class="hero-spark">✳</div>
+        </div>
+      </section>
+      <section class="ticker" aria-label="Our values"><div>GOOD DESIGN, LESS FUSS <span>✳</span> MADE FOR EVERYDAY <span>✳</span> A LITTLE JOY GOES A LONG WAY <span>✳</span> GOOD DESIGN, LESS FUSS <span>✳</span> MADE FOR EVERYDAY <span>✳</span></div></section>
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div><p class="eyebrow">The Sunday edit</p><h2>Little things, <em>big joy.</em></h2></div>
+          <p>Useful, lovely, and made to be lived with.<br />Meet your new everyday favourites.</p>
+        </div>
+        <div class="shop-tools">
+          <div class="filters" role="group" aria-label="Filter products">
+            <button class="filter-chip active" data-filter="All">Everything <span>8</span></button>
+            <button class="filter-chip" data-filter="Home">Home</button>
+            <button class="filter-chip" data-filter="Living">Living</button>
+            <button class="filter-chip" data-filter="Accessories">Accessories</button>
+          </div>
+          <label class="sort-label">Sort by <select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+      <section class="quote-band" id="story">
+        <div class="quote-sun">✳</div><p class="eyebrow">A note from us</p><blockquote>“A home isn’t made in a day.<br />It’s made in <em>little moments.</em>”</blockquote><a href="#shop" class="text-link">A little more about Sunday Supply <span>↗</span></a>
+      </section>
+      <section class="newsletter">
+        <div><p class="eyebrow">Letters from Sunday</p><h2>A little good<br /><em>in your inbox.</em></h2><p>New arrivals, thoughtful notes, and 10% off your first order.</p></div>
+        <form id="newsletter-form"><label class="sr-only" for="email">Your email address</label><input id="email" type="email" placeholder="Your email address" required /><button class="button button-dark" type="submit">Count me in <span>↗</span></button><small id="newsletter-message" aria-live="polite">No noise. Just the nice stuff.</small></form>
+      </section>
+    </main>
+    <footer><a class="brand" href="#top">sunday<span>SUPPLY</span></a><span>Good things for everyday living.</span><span>© 2026 Sunday Supply</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-heading"><div><p class="eyebrow">Your little collection</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-drawer" id="close-cart" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><div>✳</div><p>Your bag is taking a little Sunday nap.</p><button class="text-link" id="browse-products">Browse the little things ↗</button></div>
+      <div class="cart-summary" id="cart-summary"><p><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></p><small>Shipping calculated at checkout.</small><button class="button button-dark checkout-button" id="checkout-button">Continue to checkout <span>↗</span></button><small class="demo-note">Demo store — checkout is a preview.</small></div>
+    </aside>
+  </body>
+</html>
