@@ -1,79 +1,64 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f6f4ef" />
-    <meta name="description" content="Good things for everyday living. Discover thoughtful home and lifestyle finds at Sunday Supply." />
-    <title>Sunday Supply — Good things for everyday living</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <div class="announcement">A little treat: free shipping on orders over $60 <span>✳</span></div>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Sunday Supply home">sunday<span>SUPPLY</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#shop">Shop all</a><a href="#shop" data-category-link="Home">Home</a><a href="#shop" data-category-link="Living">Living</a><a href="#story">Our story</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button search-toggle" aria-label="Search products" title="Search">⌕</button>
-        <button class="cart-button" id="open-cart" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1769d2" />
+  <meta name="description" content="Cartly — find everyday favourites, from tech and fashion to home and more." />
+  <title>Cartly — Everything you love, all in one place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span>✦</span> Big savings. Little prices. All day, every day. <a href="#deals">See today’s deals&nbsp; →</a></div>
+  <header class="header">
+    <div class="header-main">
+      <a class="logo" href="#top" aria-label="Cartly home">cartly<span>✦</span></a>
+      <div class="delivery"><span class="pin">⌖</span><div><small>Delivering to</small><strong>Choose your location</strong></div></div>
+      <form id="search-form" class="search" role="search"><label class="sr-only" for="search-input">Search products</label><input id="search-input" type="search" placeholder="Search for products, brands and more" autocomplete="off" /><button aria-label="Search">⌕</button></form>
+      <button class="account-btn" id="account-button"><span class="account-icon">♙</span><span>Sign in</span></button>
+      <button class="header-cart" id="open-cart" aria-label="Open shopping cart"><span>🛒</span><b>Cart</b><i id="cart-count">0</i></button>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Toggle categories" aria-expanded="false">☰</button>
+    </div>
+    <nav class="category-nav" id="category-nav" aria-label="Shop categories">
+      <button class="category-link selected" data-category="All"><span>✦</span> All deals</button>
+      <button class="category-link" data-category="Mobiles"><span>📱</span> Mobiles</button>
+      <button class="category-link" data-category="Electronics"><span>🎧</span> Electronics</button>
+      <button class="category-link" data-category="Fashion"><span>👟</span> Fashion</button>
+      <button class="category-link" data-category="Home"><span>🛋️</span> Home & furniture</button>
+      <button class="category-link" data-category="Beauty"><span>✨</span> Beauty</button>
+      <button class="category-link" data-category="Appliances"><span>🧺</span> Appliances</button>
+      <button class="category-link" data-category="Grocery"><span>🥑</span> Grocery</button>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero-wrap">
+      <div class="hero-banner" id="hero-banner">
+        <div class="hero-copy"><div class="deal-pill"><span></span> THE EVERYDAY UPGRADE SALE</div><h1>Your wishlist<br />called. It’s <em>on sale.</em></h1><p>Good finds, great prices, delivered right to your door.</p><a class="hero-cta" href="#deals">Shop the deals <span>→</span></a><div class="hero-terms">*Just a little demo sale. Big happy energy included.</div></div>
+        <div class="banner-art" aria-hidden="true"><div class="burst">UP<br />TO<br /><b>60%</b><br />OFF</div><div class="art-phone">✦<small>NEW<br />ARRIVALS</small></div><div class="art-bag">🛍️</div><div class="art-box">🎧</div><div class="art-star star-one">✦</div><div class="art-star star-two">✳</div></div>
+        <div class="banner-dots"><button class="dot active" aria-label="Sale banner 1"></button><button class="dot" aria-label="Sale banner 2"></button><button class="dot" aria-label="Sale banner 3"></button></div>
       </div>
-    </header>
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">A softer kind of everyday</p>
-          <h1>Make room<br />for <em>good things.</em></h1>
-          <p class="hero-note">Thoughtful finds for slow mornings, cozy corners, and all the little rituals in between.</p>
-          <a class="button button-dark" href="#shop">Find your favourites <span>↗</span></a>
-          <div class="hero-stamp"><span>MADE FOR<br />REAL LIFE</span><b>✳</b></div>
-        </div>
-        <div class="hero-art" role="img" aria-label="Sunlit still life of home and lifestyle objects">
-          <div class="hero-orb"></div>
-          <div class="hero-photo"></div>
-          <div class="hero-caption">SLOW DOWN<br />A LITTLE.</div>
-          <div class="hero-spark">✳</div>
-        </div>
-      </section>
-      <section class="ticker" aria-label="Our values"><div>GOOD DESIGN, LESS FUSS <span>✳</span> MADE FOR EVERYDAY <span>✳</span> A LITTLE JOY GOES A LONG WAY <span>✳</span> GOOD DESIGN, LESS FUSS <span>✳</span> MADE FOR EVERYDAY <span>✳</span></div></section>
-      <section class="shop-section" id="shop">
-        <div class="section-heading">
-          <div><p class="eyebrow">The Sunday edit</p><h2>Little things, <em>big joy.</em></h2></div>
-          <p>Useful, lovely, and made to be lived with.<br />Meet your new everyday favourites.</p>
-        </div>
-        <div class="shop-tools">
-          <div class="filters" role="group" aria-label="Filter products">
-            <button class="filter-chip active" data-filter="All">Everything <span>8</span></button>
-            <button class="filter-chip" data-filter="Home">Home</button>
-            <button class="filter-chip" data-filter="Living">Living</button>
-            <button class="filter-chip" data-filter="Accessories">Accessories</button>
-          </div>
-          <label class="sort-label">Sort by <select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
-        </div>
-        <div class="product-grid" id="product-grid" aria-live="polite"></div>
-      </section>
-      <section class="quote-band" id="story">
-        <div class="quote-sun">✳</div><p class="eyebrow">A note from us</p><blockquote>“A home isn’t made in a day.<br />It’s made in <em>little moments.</em>”</blockquote><a href="#shop" class="text-link">A little more about Sunday Supply <span>↗</span></a>
-      </section>
-      <section class="newsletter">
-        <div><p class="eyebrow">Letters from Sunday</p><h2>A little good<br /><em>in your inbox.</em></h2><p>New arrivals, thoughtful notes, and 10% off your first order.</p></div>
-        <form id="newsletter-form"><label class="sr-only" for="email">Your email address</label><input id="email" type="email" placeholder="Your email address" required /><button class="button button-dark" type="submit">Count me in <span>↗</span></button><small id="newsletter-message" aria-live="polite">No noise. Just the nice stuff.</small></form>
-      </section>
-    </main>
-    <footer><a class="brand" href="#top">sunday<span>SUPPLY</span></a><span>Good things for everyday living.</span><span>© 2026 Sunday Supply</span></footer>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
-      <div class="drawer-heading"><div><p class="eyebrow">Your little collection</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-drawer" id="close-cart" aria-label="Close shopping bag">×</button></div>
-      <div class="cart-items" id="cart-items"></div>
-      <div class="cart-empty" id="cart-empty"><div>✳</div><p>Your bag is taking a little Sunday nap.</p><button class="text-link" id="browse-products">Browse the little things ↗</button></div>
-      <div class="cart-summary" id="cart-summary"><p><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></p><small>Shipping calculated at checkout.</small><button class="button button-dark checkout-button" id="checkout-button">Continue to checkout <span>↗</span></button><small class="demo-note">Demo store — checkout is a preview.</small></div>
-    </aside>
-  </body>
+      <div class="service-row"><div><span>🚚</span><p><b>Free delivery</b><small>on orders over $50</small></p></div><div><span>↩</span><p><b>Easy returns</b><small>within 30 days</small></p></div><div><span>🔒</span><p><b>Secure checkout</b><small>shop with confidence</small></p></div><div><span>♡</span><p><b>Made for you</b><small>find something lovely</small></p></div></div>
+    </section>
+    <section class="category-strip"><div class="row-title"><div><small>TAKE A LOOK AROUND</small><h2>Shop by category</h2></div><span>Good stuff starts here ✨</span></div><div class="category-tiles">
+      <button data-category="Mobiles" class="tile tile-blue"><span>📱</span><b>Mobiles</b><small>From $199</small></button><button data-category="Electronics" class="tile tile-lilac"><span>🎧</span><b>Electronics</b><small>Hear the difference</small></button><button data-category="Fashion" class="tile tile-peach"><span>👟</span><b>Fashion</b><small>Find your fit</small></button><button data-category="Home" class="tile tile-green"><span>🪴</span><b>Home & living</b><small>Make it yours</small></button><button data-category="Beauty" class="tile tile-pink"><span>🧴</span><b>Beauty</b><small>A little self-care</small></button><button data-category="Appliances" class="tile tile-yellow"><span>☕</span><b>Appliances</b><small>Everyday helpers</small></button>
+    </div></section>
+    <section class="deal-section" id="deals">
+      <div class="row-title deal-title"><div><small>GOOD DEALS, GOOD MOOD</small><h2>Today’s top picks <span class="spark">✦</span></h2></div><div class="deal-meta"><span class="live-dot"></span> Deals end in <b id="deal-clock">08:42:16</b></div></div>
+      <div class="toolbar"><div class="filter-pills" id="filter-pills"><button class="filter-pill active" data-filter="All">All products <span id="all-count">12</span></button><button class="filter-pill" data-filter="Mobiles">Mobiles</button><button class="filter-pill" data-filter="Electronics">Electronics</button><button class="filter-pill" data-filter="Fashion">Fashion</button><button class="filter-pill" data-filter="Home">Home</button><button class="filter-pill" data-filter="Beauty">Beauty</button><button class="filter-pill" data-filter="Appliances">Appliances</button></div><label class="sort-control">Sort <select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select></label></div>
+      <p class="results-count" id="results-count" aria-live="polite"></p>
+      <div class="products" id="product-grid" aria-live="polite"></div>
+      <div class="load-more-wrap"><button class="load-more" id="load-more">You’ve seen all the good stuff <span>✓</span></button></div>
+    </section>
+    <section class="promo-row"><div class="promo-card promo-purple"><span class="promo-icon">🎧</span><div><small>YOUR SOUND, YOUR RULES</small><h3>Turn up the<br />good stuff.</h3><a href="#deals" data-jump-category="Electronics">Shop audio deals →</a></div></div><div class="promo-card promo-orange"><span class="promo-icon">🏡</span><div><small>A LITTLE HOME REFRESH</small><h3>Make yourself<br />at home.</h3><a href="#deals" data-jump-category="Home">Browse home finds →</a></div></div></section>
+    <section class="newsletter"><div><small>THE CARTLY GOOD LIST</small><h2>Nice things, <em>occasionally.</em></h2><p>New finds, special offers, zero inbox chaos.</p></div><form id="newsletter-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required /><button type="submit">Join the list →</button><small id="newsletter-message" aria-live="polite">No spam. Pinky promise.</small></form></section>
+  </main>
+  <footer><a class="logo" href="#top">cartly<span>✦</span></a><span>Shop what makes you happy.</span><span>© 2026 Cartly · Student portfolio demo</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><div class="backdrop" id="backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="drawer-head"><div><small>YOUR LITTLE HAUL</small><h2>My cart <span id="drawer-count">(0)</span></h2></div><button id="close-cart" aria-label="Close cart">×</button></div><div class="cart-list" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>🛍️</span><b>Your cart is feeling a little empty.</b><p>Let’s find something you’ll love.</p><button id="browse-deals">Explore deals →</button></div><div class="cart-summary" id="cart-summary"><p><span>Subtotal</span><b id="cart-subtotal">$0.00</b></p><small>Delivery & taxes calculated at checkout.</small><button class="checkout" id="checkout-button">Continue to checkout <span>→</span></button><small class="demo-note">Portfolio demo — no real orders or payments.</small></div></aside>
+  <div class="modal-shade" id="modal-shade"><section class="signin-modal" role="dialog" aria-modal="true" aria-labelledby="signin-title"><button id="close-modal" class="modal-close" aria-label="Close sign in">×</button><div class="modal-hello">👋</div><small>WELCOME TO CARTLY</small><h2 id="signin-title">Good to see you!</h2><p>Sign-in is a UI preview in this portfolio project.</p><button id="modal-ok">Sounds good</button></section></div>
+</body>
 </html>

@@ -1,15 +1,18 @@
-# Sunday Supply — Shopwave storefront
+# Cartly — marketplace storefront
 
-A responsive storefront portfolio project built with HTML, CSS, and vanilla JavaScript. It includes product category filters, price sorting, product search, a slide-out bag with quantity controls, localStorage persistence, and a demo newsletter form.
+A Flipkart-inspired shopping experience with its own brand, layout, and products. Built with responsive HTML, CSS, and vanilla JavaScript.
+
+## Features
+
+- Product catalogue across mobiles, electronics, fashion, beauty, home, appliances, and grocery
+- Live search, category filtering, and sorting by price or rating
+- Wishlist hearts and shopping cart with quantity controls
+- Cart and wishlist state saved in localStorage
+- Rotating sale-banner styles, countdown timer, sign-in preview, and newsletter interaction
+- Responsive navigation and product grid for desktop and mobile
 
 ## Run locally
 
-Open `index.html` in a browser. No build step or package installation is required.
+Open `index.html` in a browser. No package installation or build step is needed.
 
-## Files
-
-- `index.html` — storefront structure
-- `styles.css` — responsive styles and interactions
-- `app.js` — product catalogue, filters, shopping bag, and form behavior
-
-Product photography and Google Fonts load from external URLs. The checkout is intentionally a front-end demo; it does not process payments.
+Checkout, sign-in, and newsletter submission are front-end demonstrations. No real orders or payments are processed.
